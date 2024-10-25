@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="game-styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Memorizando o Alfabeto</h1>
+            <div id="game-board"></div>
+            <div id="congrats-message">Parabéns! Você concluiu o jogo!</div>
+            <div class="button-container">
+                <button id="restart-button" onclick="restartGame()">Reiniciar Jogo</button>
+                <button id="back-button" onclick="goBack()">Voltar à Página Inicial</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h2>Jogadores</h2>
+            <div id="player-info"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

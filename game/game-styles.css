@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../img/teste.jpg'); /* Adicionar imagem de fundo */
+    background-size: cover; /* Cobrir toda a tela com a imagem */
+    background-position: center; /* Centralizar a imagem de fundo */
+    user-select: none;
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000; /* Adicionar borda ao redor do contêiner */
+    padding: 20px; /* Adicionar preenchimento ao contêiner */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); /* Aumentar a sombra ao redor do contêiner */
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo do contêiner com opacidade */
+    margin-right: 20px; /* Espaço entre o contêiner do jogo e a barra lateral */
+}
+.card {
+    width: 80px; /* Diminuir o tamanho dos cards */
+    height: 80px; /* Diminuir o tamanho dos cards */
+    border: 1px solid #000;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px; /* Ajustar para o novo tamanho dos cards */
+    font-size: 24px; /* Ajustar o tamanho da fonte */
+    cursor: pointer;
+    background-color: green;
+}
+
+.hidden {
+    background-color: white;
+    color: white;
+}
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 80px); /* Ajustar para o novo tamanho dos cards */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+#congrats-message {
+    display: none;
+    font-size: 24px;
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+}
+#restart-button, #back-button {
+    display: inline-block; /* Alinhar os botões lado a lado */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+h1, h2 {
+    text-align: center; /* Centralizar o título */
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000; /* Adicionar borda ao redor da barra lateral */
+    padding: 20px; /* Adicionar preenchimento à barra lateral */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Aumentar a sombra ao redor da barra lateral */
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo da barra lateral com opacidade */
+    width: 300px; /* Largura da barra lateral */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centralizar os botões */
+    gap: 10px; /* Espaço entre os botões */
+    width: 100%;
+}
