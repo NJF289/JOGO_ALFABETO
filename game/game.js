@@ -105,7 +105,7 @@ function restartGame() {
 }
 
 function goBack() {
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 }
 
 document.addEventListener('click', event => {
