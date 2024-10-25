@@ -1,6 +1,6 @@
 // pages/api/save-game.js
 import { Pool } from 'pg';
-
+import pool from 'node_modules/dotenv/lib/database.js';
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
   ssl: {
@@ -52,5 +52,27 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error('Error saving game results:', error);
     res.status(500).json({ message: 'Error saving game results' });
+  }
+}
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+      return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+      const client = await pool.connect();
+      try {
+          // Seu código de salvamento aqui
+          const { startTime, endTime, players } = req.body;
+          
+          // Execute as queries...
+          
+          res.status(200).json({ success: true });
+      } finally {
+          client.release();
+      }
+  } catch (error) {
+      console.error('Database error:', error);
+      res.status(500).json({ error: 'Database error' });
   }
 }
