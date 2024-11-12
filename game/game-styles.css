@@ -85,3 +85,6 @@ h1, h2 {
     gap: 10px; /* Espaço entre os botões */
     width: 100%;
 }
+#vercel-badge {
+    display: none !important;
+}
