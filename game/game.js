@@ -29,7 +29,11 @@ cards.forEach(letter => {
 
 setTimeout(() => {
     document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
-}, 50000);
+    lockBoard = false; // Desbloqueia o tabuleiro após esconder as cartas
+}, 20000); // Ajustei para 5 segundos para teste mais rápido
+
+// Bloqueia o tabuleiro enquanto as cartas estão visíveis
+lockBoard = true;
 
 gameBoard.addEventListener('click', event => {
     if (lockBoard) return;
