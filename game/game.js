@@ -29,7 +29,7 @@ cards.forEach(letter => {
 
 setTimeout(() => {
     document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
-}, 5000);
+}, 50000);
 
 gameBoard.addEventListener('click', event => {
     if (lockBoard) return;
