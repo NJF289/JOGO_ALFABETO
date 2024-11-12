@@ -1,4 +1,3 @@
-// Adicione estas duas novas variáveis no início do arquivo, junto com as outras variáveis globais
 const players = JSON.parse(localStorage.getItem('players'));
 let currentPlayerIndex = 0;
 const playerStats = players.map(player => ({ name: player, acertos: 0, erros: 0 }));
@@ -30,7 +29,7 @@ cards.forEach(letter => {
 setTimeout(() => {
     document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
     lockBoard = false; // Desbloqueia o tabuleiro após esconder as cartas
-}, 20000); // Ajustei para 5 segundos para teste mais rápido
+}, 20000); // Ajustei para 20 segundos
 
 // Bloqueia o tabuleiro enquanto as cartas estão visíveis
 lockBoard = true;
@@ -72,35 +71,11 @@ gameBoard.addEventListener('click', event => {
 });
 
 // Substitua a função checkGameCompletion existente por esta nova versão
-async function checkGameCompletion() {
+function checkGameCompletion() {
     const hiddenCards = document.querySelectorAll('.card.hidden');
     if (hiddenCards.length === 0) {
         gameEndTime = new Date().toISOString();
         document.getElementById('congrats-message').style.display = 'block';
-        
-        // Salva os resultados do jogo
-        try {
-            const response = await fetch('/api/save-game', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    startTime: gameStartTime,
-                    endTime: gameEndTime,
-                    players: playerStats
-                })
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to save game results');
-            }
-
-            console.log('Game results saved successfully');
-        } catch (error) {
-            console.error('Error saving game results:', error);
-            alert('Failed to save game results. Please try again.');
-        }
     }
 }
 
