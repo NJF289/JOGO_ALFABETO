@@ -70,7 +70,6 @@ gameBoard.addEventListener('click', event => {
     updatePlayerInfo();
 });
 
-// Substitua a função checkGameCompletion existente por esta nova versão
 function checkGameCompletion() {
     const hiddenCards = document.querySelectorAll('.card.hidden');
     if (hiddenCards.length === 0) {

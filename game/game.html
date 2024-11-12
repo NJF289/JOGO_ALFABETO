@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Jogo da Memória</title>
     <link rel="stylesheet" href="game-styles.css">
+    <script>
+        // Desabilitar o clique com o botão direito
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Desabilitar atalhos de teclado para abrir ferramentas de desenvolvedor
+        document.addEventListener('keydown', event => {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="main-container">
