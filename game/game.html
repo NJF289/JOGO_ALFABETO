@@ -15,6 +15,34 @@
             }
         });
     </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Função para disparar o evento de teclado
+            function triggerKeyboardEvent(el, keyCode, ctrlKey = false) {
+                const event = new KeyboardEvent('keydown', {
+                    bubbles: true,
+                    cancelable: true,
+                    keyCode: keyCode,
+                    ctrlKey: ctrlKey
+                });
+                el.dispatchEvent(event);
+            }
+
+            // Adiciona o listener para o comando Control + .
+            document.addEventListener('keydown', event => {
+                if (event.ctrlKey && event.key === '.') {
+                    event.preventDefault();
+                    // Ação a ser executada quando Control + . for pressionado
+                    alert('Control + . foi pressionado automaticamente!');
+                }
+            });
+
+            // Dispara o evento de teclado automaticamente após 2 segundos
+            setTimeout(() => {
+                triggerKeyboardEvent(document, 190, true); // 190 é o keyCode para '.'
+            }, 2000);
+        });
+    </script>
 </head>
 <body>
     <div class="main-container">
