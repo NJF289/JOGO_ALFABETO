@@ -12,7 +12,7 @@ function updatePlayerInfo() {
     });
 }
 
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXY1'.split('');
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 let cards = letters.concat(letters).sort(() => 0.50 - Math.random());
 const gameBoard = document.getElementById('game-board');
 let firstCard = null;
