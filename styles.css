@@ -9,71 +9,28 @@ body {
     background-size: cover; /* Cobrir toda a tela com a imagem */
     background-position: center; /* Centralizar a imagem de fundo */
     user-select: none;
-    font-family: 'Poppins', sans-serif; /* Fonte mais moderna e estilosa */
-    color: #222; /* Cor do texto mais forte */
 }
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #333; /* Cor da borda mais destacada */
-    padding: 30px; /* Maior preenchimento */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra mais definida */
-    background-color: rgba(255, 255, 255, 0.98); /* Maior opacidade para contraste */
-    border-radius: 12px; /* Cantos mais arredondados */
-    max-width: 450px;
-    text-align: center;
+    border: 2px solid #000; /* Adicionar borda ao redor do contêiner */
+    padding: 20px; /* Adicionar preenchimento ao contêiner */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumentar a sombra ao redor do contêiner */
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo do contêiner com opacidade */
 }
-
 h1 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #111; /* Texto mais escuro para melhor leitura */
+    text-align: center; /* Centralizar o título */
 }
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    gap: 15px; /* Espaçamento maior entre os elementos */
 }
-
-label {
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-weight: 500;
+label, input, button {
+    margin: 10px;
 }
-
-input {
-    width: 85%;
-    padding: 10px;
-    border: 1px solid #666;
-    border-radius: 8px;
-    font-size: 18px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #003d80;
-    transform: scale(1.05);
-}
-
 #player-names input {
     display: block;
-    margin: 8px 0;
+    margin: 5px 0;
 }
