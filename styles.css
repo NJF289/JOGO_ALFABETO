@@ -9,29 +9,66 @@ body {
     background-size: cover; /* Cobrir toda a tela com a imagem */
     background-position: center; /* Centralizar a imagem de fundo */
     user-select: none;
+    font-family: 'Arial', sans-serif; /* Fonte mais moderna */
+    color: #333; /* Cor do texto mais suave */
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #000; /* Adicionar borda ao redor do contêiner */
-    padding: 20px; /* Adicionar preenchimento ao contêiner */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumentar a sombra ao redor do contêiner */
-    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo do contêiner com opacidade */
+    border: 2px solid #444; /* Cor da borda mais suave */
+    padding: 25px; /* Maior preenchimento */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais sutil */
+    background-color: rgba(255, 255, 255, 0.95); /* Maior opacidade */
+    border-radius: 10px; /* Cantos arredondados */
+    max-width: 400px;
+    text-align: center;
 }
+
 h1 {
-    text-align: center; /* Centralizar o título */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
-label, input, button {
-    margin: 10px;
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
+
+input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 #player-names input {
     display: block;
     margin: 5px 0;
 }
-
